@@ -1,8 +1,8 @@
 import java.util.Arrays;
 
 class UnionFind {
-    private int[] parents;
-    private int[] rank;
+    protected int[] parents;
+    protected int[] rank;
     int numberOfParents;
 
     UnionFind(int size) {
@@ -16,12 +16,12 @@ class UnionFind {
         System.out.println(Arrays.toString(this.parents));
     }
 
-    private void make(int i) {
+    public void make(int i) {
         parents[i] = i;
         rank[i] = 0;
     }
 
-    int find(int node) {
+    public int find(int node) {
         if (parents[node] != node)
             parents[node] = find(parents[node]);
         return parents[node];
