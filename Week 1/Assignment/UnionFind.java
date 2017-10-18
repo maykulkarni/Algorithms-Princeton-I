@@ -12,6 +12,10 @@ class UnionFind {
         for (int i = 0; i < size; i++) make(i);
     }
 
+    public int getNumberOfParents() {
+        return this.numberOfParents;
+    }
+
     void printUF() {
         System.out.println(Arrays.toString(this.parents));
     }

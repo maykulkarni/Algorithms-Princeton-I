@@ -63,6 +63,10 @@ public class ArrayStack<T> implements Iterable<T> {
         for (T newItem : itemArray) push(newItem);
     }
 
+    public boolean isEmpty() {
+        return N == 0;
+    }
+
     public T pop() {
         if (N < capacity / 4) {
             resize(capacity / 2 + 1);

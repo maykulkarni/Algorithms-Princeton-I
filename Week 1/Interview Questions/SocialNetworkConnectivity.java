@@ -14,7 +14,7 @@ public class SocialNetworkConnectivity {
             int from = in.nextInt();
             int to = in.nextInt();
             uf.union(from, to);
-            if (uf.numberOfParents == 1) {
+            if (uf.getNumberOfParents() == 1) {
                 System.out.println("All are friends!");
                 break;
             }
