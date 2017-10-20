@@ -45,16 +45,16 @@ public class ArrayStack<T> implements Iterable<T> {
         };
     }
 
-    private void resize(int capacity) {
+    private void ensureCapacity(int capacity) {
         this.capacity = capacity;
         T[] newArray = (T[]) new Object[capacity];
-        System.arraycopy(data, 0, newArray, 0, N + 1);
+        System.arraycopy(data, 0, newArray, 0, N);
         data = newArray;
     }
 
     public void push(T newItem) {
         if (N == capacity - 1) {
-            resize(capacity * 2);
+            ensureCapacity(capacity * 2);
         }
         data[N++] = newItem;
     }
@@ -69,7 +69,7 @@ public class ArrayStack<T> implements Iterable<T> {
 
     public T pop() {
         if (N < capacity / 4) {
-            resize(capacity / 2 + 1);
+            ensureCapacity(capacity / 2 + 1);
         }
         if (N < 0) throw new IllegalStateException("Stack Empty");
         T toReturn = data[--N];
