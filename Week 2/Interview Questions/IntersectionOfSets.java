@@ -1,5 +1,5 @@
 public class IntersectionOfSets {
-    public static int findMatching(Point[] one, Point[] two) {
+    private static int findMatching(Point[] one, Point[] two) {
         int onePointer = 0;
         int twoPointer = 0;
         int answer = 0;
@@ -36,7 +36,7 @@ public class IntersectionOfSets {
         T x;
         T y;
 
-        public Point(T x, T y) {
+        Point(T x, T y) {
             this.x = x;
             this.y = y;
         }

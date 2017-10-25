@@ -4,7 +4,7 @@ import java.util.Random;
 /**
  * @author Mayur Kulkarni <mayurkulkarni012@gmail.com>
  */
-public class GermanFlag {
+public class DutchFlag {
     /**
      * Get randomly colored array
      *
