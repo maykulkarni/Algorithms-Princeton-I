@@ -27,7 +27,7 @@ public class Inversions {
             else if (j > high) a[k] = aux[i++];
             else if (less(aux[j], aux[i])) {
                 a[k] = aux[j++];
-                inversions += mid - k + 1;
+                inversions += mid - i + 1;
             } else a[k] = aux[i++];
 
         }
@@ -72,7 +72,7 @@ public class Inversions {
 //            testSort();
 //        }
 //        System.out.println(stopwatch.elapsedTime());
-        Integer[] a = {5, 4, 3, 2, 1};
+        Integer[] a = {2, 1, 1, 1, 1};
         System.out.println(sort(a));
     }
 }
